@@ -1,0 +1,74 @@
+
+git的应用
+		1) 初始化本地仓库
+			c:/briup/git_web1903
+			> git init
+		2) 查看仓库状态
+			> git status
+
+
+
+		3) 创建文件，并且将文件交给git来追踪（在一起）
+			> git add *
+		4) 提交成为一个版本（结婚）
+			> git commit -m "xxxx"
+			第一次提交的时候需要设置当前用户
+			> git config --global user.name = "pluslicy"
+			> git config --global user.email = "licy@briup.com"
+		5) 查看提交记录
+			> git log
+		6) 时光穿梭
+			> git reset --hard commitID
+		7) 查看所有提交记录
+			> git reflog
+		8) 忽略文件
+			.gitignore
+
+			/node_modules
+			/dist
+
+
+		9) 创建远程仓库 （github/gitee【码云】（代码与云服务））
+
+			https://github.com/pluslicy/git-web1903.git
+			注意：
+				一个本地仓库只能与一个远程仓库绑定，一个项目一个仓库
+			1. 远程仓库与本地仓库的绑定
+				> git remote add origin https://github.com/pluslicy/git-web1903.git
+
+			2. 将本地仓库的代码提交到远程
+				> git push origin master
+
+			3. 将远程仓库的代码更新到本地
+				> git pull origin master
+
+		10)多人协作
+			1. 组长邀请合作者
+			2. 合作者通过邮箱中的邀请连接同意邀请
+			3. 合作者就可以提交代码
+
+			git add -> git commit -> git pull -> git push
+
+		11)分支管理 
+			https://www.liaoxuefeng.com/wiki/896043488029600/900003767775424
+		12) git的配置
+			用户名 email 远程地址
+
+			查看git的配置信息
+			> git config --list
+			配置信息保存在哪里?
+			~/.gitconfig
+
+			项目根目录 .git
+			git-web1093/.git
+
+
+与svn使用方式类似，同为版本控制工具
+
+svn使用图形化界面（小乌龟，右击提交，右击更新）
+git 命令行形式，输入各种命令，达到版本控制的功能      （客户端软件）   
+	前端开发git使用频率高
+	，svn  java使用频率高     subversion将本地代码保存到服务器端，具有版本控制。
+	git优点：   github服务好，软件兼容性好、
+git安装	linux：$sudo  apt install git  
+	windows：git.exe    安装确定  git  --version
